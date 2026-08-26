@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Advent Capital Realty | Gabe Martinez, Broker | Inland Empire</title>
+<link rel="icon" type="image/png" href="img/logo.png">
 <meta name="description" content="Advent Capital Realty - Gabe Martinez, real estate broker serving Riverside, San Bernardino, and the Inland Empire. Bilingual English/Spanish. CA DRE #01501814.">
 <style>
   :root{
@@ -16,7 +17,8 @@
   .wrap{max-width:960px;margin:0 auto;padding:0 24px}
   header{position:sticky;top:0;background:var(--maroon);color:#f7ece4;z-index:10}
   header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
-  .brand{font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase}
+  .brand{font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+  .brand img{height:26px;width:auto;display:block}
   .brand span{color:#d98c5f}
   .lang-toggle{font-family:inherit;font-size:.8rem;letter-spacing:.1em;background:transparent;color:#f9ece4;border:1px solid #d98c5f;padding:6px 14px;cursor:pointer;border-radius:2px}
   .lang-toggle:hover{background:var(--gold);color:#f7ece4}
@@ -67,7 +69,7 @@
 <body>
 <header>
   <div class="wrap">
-    <div class="brand">Advent Capital <span>Realty</span></div>
+    <div class="brand"><img src="img/logo.png" alt="">Advent Capital <span>Realty</span></div>
     <button class="lang-toggle" id="langBtn" onclick="toggleLang()">Español</button>
   </div>
 </header>
