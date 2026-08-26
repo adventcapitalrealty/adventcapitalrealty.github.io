@@ -7,31 +7,41 @@
 <meta name="description" content="Advent Capital Realty - Gabe Martinez, real estate broker serving Riverside, San Bernardino, and the Inland Empire. Bilingual English/Spanish. CA DRE #01501814.">
 <style>
   :root{
-    --ink:#1a2332; --paper:#f7f5f0; --gold:#b98a2f; --gold-dark:#96701f; --line:#e3ddd0;
+    --ink:#1c1210; --paper:#ead1c6; --gold:#a34a28; --gold-dark:#7c3a1e; --line:#d8b8a8;
+    --maroon:#331812; --card:#f9ece4;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper);line-height:1.6}
   .wrap{max-width:960px;margin:0 auto;padding:0 24px}
-  header{position:sticky;top:0;background:var(--ink);color:#fff;z-index:10}
+  header{position:sticky;top:0;background:var(--maroon);color:#f7ece4;z-index:10}
   header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
   .brand{font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase}
   .brand span{color:var(--gold)}
   .lang-toggle{font-family:inherit;font-size:.8rem;letter-spacing:.1em;background:transparent;color:#fff;border:1px solid var(--gold);padding:6px 14px;cursor:pointer;border-radius:2px}
-  .lang-toggle:hover{background:var(--gold);color:var(--ink)}
-  .hero{padding:96px 0 72px;text-align:center;border-bottom:1px solid var(--line)}
+  .lang-toggle:hover{background:var(--gold);color:#f7ece4}
+  .hero{padding:110px 0 84px;text-align:center;border-bottom:1px solid var(--line);
+    background:linear-gradient(rgba(40,18,12,.72),rgba(40,18,12,.72)),url('img/suburbia-aerial.jpg') center/cover no-repeat;color:#f7ece4}
+  .hero p{color:#eed9cc}
+  .hero .kicker{color:#e0a171}
+  .banner{width:100%;max-height:340px;object-fit:cover;border-radius:4px;margin:0 auto 36px;display:block;border:1px solid var(--line)}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .strip figure{margin:0}
+  .strip img{width:100%;height:190px;object-fit:cover;border-radius:4px;border:1px solid var(--line);display:block}
+  .cap{text-align:center;font-size:.88rem;margin-top:10px;color:var(--gold-dark);letter-spacing:.06em}
+  .credit{margin-top:10px;font-size:.7rem;color:#9c7f72}
   .hero .kicker{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:18px}
   .hero h1{font-size:2.6rem;font-weight:normal;line-height:1.2;margin-bottom:18px}
-  .hero p{max-width:620px;margin:0 auto 30px;font-size:1.1rem;color:#3c4656}
-  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:12px 30px;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;border-radius:2px}
+  .hero p{max-width:620px;margin:0 auto 30px;font-size:1.1rem}
+  .btn{display:inline-block;background:var(--maroon);color:#f7ece4;text-decoration:none;padding:12px 30px;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;border-radius:2px}
   .btn:hover{background:var(--gold-dark)}
   section{padding:64px 0;border-bottom:1px solid var(--line)}
   h2{font-size:1.7rem;font-weight:normal;text-align:center;margin-bottom:8px}
   .sub{text-align:center;color:var(--gold-dark);font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:40px}
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
-  .card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);padding:28px 24px}
+  .card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);padding:28px 24px}
   .card h3{font-size:1.1rem;margin-bottom:10px}
-  .card p{font-size:.95rem;color:#3c4656}
+  .card p{font-size:.95rem;color:#4a342c}
   .about p{max-width:680px;margin:0 auto 16px;text-align:center;font-size:1.02rem}
   .about a{color:var(--gold-dark)}
   .contact{text-align:center}
@@ -40,8 +50,8 @@
   .socials{margin-top:22px;font-size:.9rem;letter-spacing:.05em}
   .socials a{color:var(--gold-dark);text-decoration:none;margin:0 10px}
   .socials a:hover{text-decoration:underline}
-  footer{background:var(--ink);color:#aab4c4;text-align:center;padding:28px 24px;font-size:.78rem;letter-spacing:.08em;line-height:2}
-  footer .lic{color:#fff}
+  footer{background:var(--maroon);color:#c9a894;text-align:center;padding:28px 24px;font-size:.78rem;letter-spacing:.08em;line-height:2}
+  footer .lic{color:#f7ece4}
   [data-es]{display:none}
   html[lang="es"] [data-en]{display:none}
   html[lang="es"] [data-es]{display:block}
@@ -99,10 +109,35 @@
   </div>
 </section>
 
+<section id="specialty">
+  <div class="wrap">
+    <h2 data-en>Every Kind of Property</h2><h2 data-es>Todo Tipo de Propiedad</h2>
+    <div class="sub" data-en>Homes to land to specialty</div><div class="sub" data-es>De casas a terrenos a propiedades especiales</div>
+    <div class="strip">
+      <figure>
+        <img src="img/church.jpg" alt="California mission-style church facility" loading="lazy">
+        <figcaption class="cap" data-en>Church facilities</figcaption>
+        <figcaption class="cap" data-es>Instalaciones de iglesias</figcaption>
+      </figure>
+      <figure>
+        <img src="img/school.jpg" alt="School building exterior" loading="lazy">
+        <figcaption class="cap" data-en>Educational facilities</figcaption>
+        <figcaption class="cap" data-es>Instalaciones educativas</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fixer-upper.jpg" alt="Fixer-upper house" loading="lazy">
+        <figcaption class="cap" data-en>Fixer-uppers</figcaption>
+        <figcaption class="cap" data-es>Casas para renovar</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <section id="land">
   <div class="wrap">
     <h2 data-en>Land Opportunities</h2><h2 data-es>Oportunidades de Terrenos</h2>
     <div class="sub">Victor Valley &middot; Antelope Valley &middot; Barstow</div>
+    <img class="banner" src="img/desert-land.jpg" alt="High Desert land at sunset" loading="lazy">
     <div class="about">
       <p data-en><strong>Own land for your future.</strong> Some of the largest fortunes ever made were made in land banking. The idea is simple: buy raw, pre-developed land in the path of growth, and hold while the growth arrives. Every subdivision and every shopping center was somebody's empty parcel first.</p>
       <p data-es><strong>Compre terreno para su futuro.</strong> Algunas de las fortunas más grandes jamás hechas se hicieron comprando terrenos. La idea es sencilla: compre terreno crudo, sin desarrollar, en la ruta del crecimiento, y manténgalo mientras llega el crecimiento. Cada fraccionamiento y cada centro comercial fue primero el terreno vacío de alguien.</p>
@@ -157,6 +192,7 @@
 <footer>
   <div class="lic">Advent Capital Realty &middot; CA DRE #01501814</div>
   <div data-en>&copy; 2026 Advent Capital Realty. All rights reserved.</div>
+  <div class="credit">Photos: suburbia aerial by Marek Slusarczyk (CC BY 3.0, Wikimedia), church by Leticia Roncero (CC BY 2.0, Flickr), fixer-upper by Nicholas_T (CC BY 2.0, Flickr), school (CC0, Wikimedia), desert (public domain, Flickr).</div>
   <div data-es>&copy; 2026 Advent Capital Realty. Todos los derechos reservados.</div>
 </footer>
 
