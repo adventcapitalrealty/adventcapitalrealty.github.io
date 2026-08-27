@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advent Capital Realty | Gabe Martinez, Broker | Inland Empire</title>
+<link rel="icon" type="image/png" href="img/logo.png">
+<meta name="description" content="Advent Capital Realty - Gabe Martinez, real estate broker serving Riverside, San Bernardino, and the Inland Empire. Bilingual English/Spanish. CA DRE #01501814.">
+<style>
+  :root{
+    --ink:#1c1210; --paper:#ead1c6; --gold:#a34a28; --gold-dark:#7c3a1e; --line:#d8b8a8;
+    --maroon:#331812; --card:#f9ece4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;background:var(--maroon);color:#f7ece4;z-index:10}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+  .brand{font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+  .brand img{height:1.65em;width:auto;display:block}
+  .brand span{color:#d98c5f}
+  .lang-toggle{font-family:inherit;font-size:.8rem;letter-spacing:.1em;background:transparent;color:#f9ece4;border:1px solid #d98c5f;padding:6px 14px;cursor:pointer;border-radius:2px}
+  .lang-toggle:hover{background:var(--gold);color:#f7ece4}
+  .hero{position:relative;overflow:hidden;padding:150px 0 120px;text-align:center;border-bottom:2px solid var(--gold);color:#f7ece4}
+  .hero::before{content:'';position:absolute;inset:-6%;z-index:0;
+    background:linear-gradient(to bottom,rgba(51,24,18,.6),rgba(40,18,12,.72) 55%,rgba(28,18,16,.92)),url('img/suburbia-aerial.jpg') center/cover no-repeat;
+    animation:heroDrift 36s ease-in-out infinite alternate}
+  .hero::after{content:'';position:absolute;inset:-6%;z-index:0;opacity:0;
+    background:linear-gradient(to bottom,rgba(51,24,18,.6),rgba(40,18,12,.72) 55%,rgba(28,18,16,.92)),url('img/la-skyline.jpg') center/cover no-repeat;
+    animation:heroDrift 36s ease-in-out infinite alternate,heroFade 32s ease-in-out infinite}
+  @keyframes heroDrift{from{transform:scale(1) translateY(0)}to{transform:scale(1.08) translateY(-1.5%)}}
+  @keyframes heroFade{0%,100%{opacity:0}42%,58%{opacity:1}}
+  .hero .wrap{position:relative;z-index:1}
+  .hero p{color:#f3e2d6}
+  .hero .wrap>*{animation:heroRise .9s ease both}
+  .hero .wrap>*:nth-child(2){animation-delay:.12s}
+  .hero .wrap>*:nth-child(3){animation-delay:.24s}
+  .hero .wrap>*:nth-child(4){animation-delay:.36s}
+  .hero .wrap>*:nth-child(5){animation-delay:.48s}
+  .hero .wrap>*:nth-child(6){animation-delay:.6s}
+  .hero .wrap>*:nth-child(7){animation-delay:.72s}
+  .hero .wrap>*:nth-child(8){animation-delay:.84s}
+  @keyframes heroRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @media(prefers-reduced-motion:reduce){.hero::before,.hero::after{animation:none}.hero::after{opacity:0}.hero .wrap>*{animation:none}}
+  .banner{width:100%;max-height:340px;object-fit:cover;border-radius:4px;margin:0 auto 36px;display:block;border:1px solid var(--line)}
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .strip figure{margin:0}
+  .strip img{width:100%;height:190px;object-fit:cover;border-radius:4px;border:1px solid var(--line);display:block}
+  .cap{text-align:center;font-size:.9rem;font-weight:bold;margin-top:10px;color:#331812;letter-spacing:.06em}
+  .headshot{width:180px;height:180px;object-fit:cover;border-radius:50%;border:3px solid var(--gold);display:block;margin:0 auto 30px}
+  .qr{width:150px;height:150px;display:block;margin:26px auto 8px;border:1px solid var(--line);border-radius:6px;background:#fff;padding:6px}
+  .credit{margin-top:10px;font-size:.7rem;color:#9c7f72}
+  .hero .kicker{display:flex;align-items:center;justify-content:center;gap:16px;font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:#d98c5f;font-weight:bold;text-shadow:0 1px 5px rgba(0,0,0,.65);margin-bottom:26px}
+  .hero .kicker::before,.hero .kicker::after{content:'';width:52px;height:1px;background:#d98c5f;opacity:.75;flex:none}
+  .hero h1.name{font-size:clamp(2.7rem,7.5vw,4.4rem);font-weight:normal;line-height:1.05;margin:0 auto 18px;letter-spacing:.01em;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+  .hero .name-title{display:block;font-size:.42em;letter-spacing:.28em;text-transform:uppercase;color:#d98c5f;margin-top:12px}
+  .hero .tagline{font-style:italic;font-size:clamp(1.05rem,2.4vw,1.45rem);color:#d98c5f;margin:0 auto 30px;max-width:640px;text-wrap:balance;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+  .hero p{max-width:640px;margin:0 auto 36px;font-size:1.15rem;text-wrap:balance;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+  .btn .btn-sub{display:block;font-size:.68rem;font-weight:normal;letter-spacing:.14em;opacity:.85;margin-top:5px}
+  .btn{display:inline-block;background:var(--gold);color:#f9ece4 !important;text-decoration:none;padding:13px 32px;font-size:.85rem;font-weight:bold;letter-spacing:.15em;text-transform:uppercase;border-radius:2px;box-shadow:0 4px 14px rgba(0,0,0,.28);transition:background .25s ease,transform .25s ease}
+  .btn:hover{background:var(--gold-dark);transform:translateY(-1px)}
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:1.7rem;font-weight:normal;text-align:center;margin-bottom:8px}
+  .sub{text-align:center;color:#331812;font-weight:bold;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:40px}
+  #specialty .lede{max-width:680px;margin:-20px auto 36px;text-align:center;font-size:1.02rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+  .card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);padding:28px 24px}
+  .card h3{font-size:1.1rem;margin-bottom:10px}
+  .card p{font-size:.95rem;color:#4a342c}
+  .about p{max-width:680px;margin:0 auto 16px;text-align:center;font-size:1.02rem}
+  .about a{color:#7c3a1e;font-weight:bold}
+  .contact{text-align:center}
+  .contact .line{font-size:1.15rem;margin:8px 0}
+  .contact a{color:var(--ink)}
+  .socials{margin-top:22px;font-size:.9rem;letter-spacing:.05em}
+  .socials a{color:#331812;font-weight:bold;text-decoration:none;margin:0 10px}
+  .socials a:hover{text-decoration:underline}
+  footer{background:var(--maroon);color:#c9a894;text-align:center;padding:28px 24px;font-size:.78rem;letter-spacing:.08em;line-height:2}
+  footer .lic{color:#f7ece4}
+  [data-es]{display:none}
+  html[lang="es"] [data-en]{display:none}
+  html[lang="es"] [data-es]{display:block}
+  html[lang="es"] span[data-es]{display:inline}
+  @media(max-width:600px){
+    .hero{padding:96px 0 76px}
+    .hero .kicker{font-size:.72rem;letter-spacing:.16em;margin-bottom:22px;gap:10px}
+    .hero .kicker::before,.hero .kicker::after{width:26px}
+    .hero p{font-size:1rem;margin-bottom:28px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand"><img src="img/logo.png" alt="">Advent Capital <span>Realty</span></div>
+    <button class="lang-toggle" id="langBtn" onclick="toggleLang()">Español</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker"><span>Los Angeles &middot; Riverside &middot; San Bernardino &middot; Inland Empire</span></div>
+    <h1 class="name" data-en>Gabe Martinez<span class="name-title">Real Estate Broker</span></h1>
+    <h1 class="name" data-es>Gabe Martinez<span class="name-title">Corredor de Bienes Raíces</span></h1>
+    <p class="tagline" data-en>Real estate, bilingual and straightforward.</p>
+    <p class="tagline" data-es>Bienes raíces, bilingüe y sin rodeos.</p>
+    <p data-en>Listings, broker price opinions, probate and inherited property sales, rehab estimates, wholesale and assignment opportunities, and land parcels across Southern California.</p>
+    <p data-es>Listados, opiniones de valor (BPO), venta de propiedades heredadas y sucesiones, estimados de rehabilitación, oportunidades de venta al mayoreo y cesión, y terrenos en el sur de California.</p>
+    <a class="btn" href="tel:+19518470694" data-en>Call 951-847-0694<span class="btn-sub">Se habla español</span></a>
+    <a class="btn" href="tel:+19518470694" data-es>Llame 951-847-0694<span class="btn-sub">Hablamos español</span></a>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2 data-en>Services</h2><h2 data-es>Servicios</h2>
+    <div class="sub" data-en>What we do</div><div class="sub" data-es>Lo que hacemos</div>
+    <div class="grid">
+      <div class="card">
+        <h3 data-en>Listings &amp; Sales</h3><h3 data-es>Listados y Ventas</h3>
+        <p data-en>Residential listings and buyer representation across Riverside, San Bernardino, and the greater Inland Empire.</p>
+        <p data-es>Listados residenciales y representación de compradores en Riverside, San Bernardino y todo el Inland Empire.</p>
+      </div>
+      <div class="card">
+        <h3 data-en>Broker Price Opinions</h3><h3 data-es>Opiniones de Valor (BPO)</h3>
+        <p data-en>Broker price opinions and opinions of value grounded in current, local comparable sales - numbers you can act on.</p>
+        <p data-es>Opiniones de valor basadas en ventas comparables actuales y locales - números con los que puede tomar decisiones.</p>
+      </div>
+      <div class="card">
+        <h3 data-en>Rehab Estimates</h3><h3 data-es>Estimados de Rehabilitación</h3>
+        <p data-en>Practical repair and renovation estimates for investors evaluating flips, holds, and value-add purchases.</p>
+        <p data-es>Estimados prácticos de reparación y renovación para inversionistas que evalúan compras para revender, rentar o mejorar.</p>
+      </div>
+      <div class="card">
+        <h3 data-en>Wholesale &amp; Assignments</h3><h3 data-es>Venta al Mayoreo y Cesiones</h3>
+        <p data-en>Off-market and wholesale opportunities for investors, plus assignment deals structured cleanly through escrow.</p>
+        <p data-es>Oportunidades fuera de mercado y al mayoreo para inversionistas, además de cesiones estructuradas correctamente a través de escrow.</p>
+      </div>
+      <div class="card">
+        <h3 data-en>Probate &amp; Inherited Property Sales</h3><h3 data-es>Propiedades Heredadas y Sucesiones</h3>
+        <p data-en>Selling an inherited home is never just a transaction. Gabe guides families through every step with patience - working with multiple heirs and siblings, and handling everything from clean retail listings to as-is investor sales. He brings the same steady, discreet approach to bankruptcy and divorce sales, where timing and privacy matter as much as price. And when a sale needs more than a broker, his trusted network of attorneys, CPAs, contractors, and financial advisors helps families navigate even the trickiest probate assets, under limited or full authority.</p>
+        <p data-es>Vender una casa heredada nunca es solo una transacción. Gabe acompaña a las familias en cada paso con paciencia - trabajando con varios herederos y hermanos, y encargándose de todo, desde listados regulares hasta ventas de inversionistas tal como están. Lleva el mismo trato tranquilo y discreto a las ventas por bancarrota o divorcio, donde el ritmo y la privacidad importan tanto como el precio. Y cuando una venta necesita más que un corredor, su red de confianza de abogados, contadores públicos, contratistas y asesores financieros ayuda a las familias a manejar hasta los bienes sucesorios más complicados, bajo autoridad limitada o plena.</p>
+      </div>
+      <!-- LOANS SECTION GOES HERE when MLO/NMLS reactivates: add a fifth card for mortgage services and restore the NMLS line in the footer -->
+    </div>
+  </div>
+</section>
+
+<section id="specialty">
+  <div class="wrap">
+    <h2 data-en>Every Kind of Property</h2><h2 data-es>Todo Tipo de Propiedad</h2>
+    <div class="sub" data-en>Homes to land to specialty</div><div class="sub" data-es>De casas a terrenos a propiedades especiales</div>
+    <p class="lede" data-en>Specialty commercial is home turf. Gabe has sold church properties and other one-of-a-kind buildings - unique assets that take a broker who knows how to find the right buyer.</p>
+    <p class="lede" data-es>El comercial especializado es terreno conocido. Gabe ha vendido propiedades de iglesias y otros edificios únicos - bienes que requieren un corredor que sepa encontrar al comprador correcto.</p>
+    <div class="strip">
+      <figure>
+        <img src="img/church.jpg" alt="California mission-style church facility" loading="lazy">
+        <figcaption class="cap" data-en>Church facilities</figcaption>
+        <figcaption class="cap" data-es>Instalaciones de iglesias</figcaption>
+      </figure>
+      <figure>
+        <img src="img/school.jpg" alt="School building exterior" loading="lazy">
+        <figcaption class="cap" data-en>Educational facilities</figcaption>
+        <figcaption class="cap" data-es>Instalaciones educativas</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fixer-upper.jpg" alt="Fixer-upper house" loading="lazy">
+        <figcaption class="cap" data-en>Fixer-uppers</figcaption>
+        <figcaption class="cap" data-es>Casas para renovar</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="land">
+  <div class="wrap">
+    <h2 data-en>Land Opportunities</h2><h2 data-es>Oportunidades de Terrenos</h2>
+    <div class="sub">Victor Valley &middot; Antelope Valley &middot; Barstow</div>
+    <img class="banner" src="img/desert-land.jpg" alt="High Desert land at sunset" loading="lazy">
+    <div class="about">
+      <p data-en><strong>Own land for your future.</strong> Some of the largest fortunes ever made were made in land banking. The idea is simple: buy raw, pre-developed land in the path of growth, and hold while the growth arrives. Every subdivision and every shopping center was somebody's empty parcel first.</p>
+      <p data-es><strong>Compre terreno para su futuro.</strong> Algunas de las fortunas más grandes jamás hechas se hicieron comprando terrenos. La idea es sencilla: compre terreno crudo, sin desarrollar, en la ruta del crecimiento, y manténgalo mientras llega el crecimiento. Cada fraccionamiento y cada centro comercial fue primero el terreno vacío de alguien.</p>
+      <p data-en>Every parcel moves through four stages: undeveloped, pre-developed, developed, and redeveloped. Land banking means buying in the early stages - before the roads, the rails, and the rooftops arrive.</p>
+      <p data-es>Todo terreno pasa por cuatro etapas: sin desarrollar, pre-desarrollado, desarrollado y re-desarrollado. Comprar terrenos como inversión significa comprar en las primeras etapas - antes de que lleguen las calles, los rieles y las casas.</p>
+      <p data-en>The growth is already arriving. The $4 billion Barstow International Gateway rail facility was approved by the Barstow City Council in 2026. Brightline West high-speed rail between Southern California and Las Vegas is under construction along the I-15 corridor. And distribution and logistics keep moving east into Victor Valley and the Antelope Valley.</p>
+      <p data-es>El crecimiento ya está llegando. El proyecto ferroviario Barstow International Gateway, de $4 mil millones de dólares, fue aprobado por el Concejo Municipal de Barstow en 2026. El tren de alta velocidad Brightline West entre el sur de California y Las Vegas ya está en construcción a lo largo del corredor de la I-15. Y la industria de distribución y logística sigue moviéndose hacia el este, a Victor Valley y Antelope Valley.</p>
+      <p data-en>Through his referral partner network, Gabe offers prime parcels in Victor Valley, Antelope Valley, and Barstow - sized for any budget. Ask about easy seller financing and current inventory.</p>
+      <p data-es>A través de su red de socios de referencia, Gabe ofrece terrenos de primera en Victor Valley, Antelope Valley y Barstow - en tamaños para cualquier presupuesto. Pregunte por el fácil financiamiento del dueño y el inventario actual.</p>
+      <p data-en>Land is a long-term play - Gabe walks you through access, utilities, zoning, and holding costs so you know exactly what you are buying.</p>
+      <p data-es>El terreno es una jugada a largo plazo - Gabe le explica el acceso, los servicios, el uso de suelo y los costos de mantenerlo, para que sepa exactamente lo que está comprando.</p>
+      <p style="margin-top:26px"><a class="btn" href="tel:+19518470694" data-en>Ask about land parcels</a><a class="btn" href="tel:+19518470694" data-es>Pregunte por los terrenos</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2 data-en>About Gabe</h2><h2 data-es>Sobre Gabe</h2>
+    <div class="sub">Advent Capital Realty</div>
+    <img class="headshot" src="img/headshot.jpg" alt="Gabe Martinez, Broker">
+    <p data-en>Gabe Martinez is the founder and managing principal broker of Advent Capital Realty in Upland, California, with more than 20 years in real estate. His practice spans residential, commercial, and specialty properties - from church buildings to mobile homes.</p>
+    <p data-es>Gabe Martinez es el fundador y corredor principal de Advent Capital Realty en Upland, California, con más de 20 años en bienes raíces. Su práctica abarca propiedades residenciales, comerciales y especiales - desde edificios de iglesias hasta casas móviles.</p>
+    <p data-en>He is known for patience with first-time buyers and straight answers at every step. Over his 20+ years he has also guided many families through the sale of inherited homes, with the same steady, no-pressure approach. Fully bilingual in English and Spanish, he works every deal - and every family conversation - in whichever language his clients are most comfortable with.</p>
+    <p data-es>Es conocido por su paciencia con los compradores primerizos y por dar respuestas directas en cada paso. En sus más de 20 años también ha acompañado a muchas familias en la venta de casas heredadas, con el mismo trato tranquilo y sin presión. Completamente bilingüe en inglés y español, atiende cada negocio - y cada conversación familiar - en el idioma que prefiera su cliente.</p>
+    <!-- TAGLINE TO RESTORE WHEN MLO REACTIVATES: "Real estate and lending under one roof" - keep OFF while lending license is expired -->
+    <p data-en>From retail listings to off-market wholesale deals and land parcels, the approach is the same: real numbers, clear terms, no runaround.</p>
+    <p data-es>Desde listados regulares hasta negocios fuera de mercado y terrenos, el enfoque es el mismo: números reales, términos claros, sin rodeos.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 data-en>Contact</h2><h2 data-es>Contacto</h2>
+    <div class="sub" data-en>Let's talk</div><div class="sub" data-es>Hablemos</div>
+    <div class="line"><strong>Gabe Martinez</strong></div>
+    <div class="line">Advent Capital Realty &middot; Upland, CA</div>
+    <div class="line" data-en>Real Estate Broker</div>
+    <div class="line" data-es>Corredor de Bienes Raíces</div>
+    <div class="line"><a href="tel:+19518470694" data-en>Call or text 951-847-0694</a><a href="tel:+19518470694" data-es>Llame o escriba al 951-847-0694</a></div>
+    <div class="line"><a href="mailto:brokergabe@gmail.com">brokergabe@gmail.com</a></div>
+    <div class="line" data-en>Se habla español</div>
+    <div class="line" data-es>Hablamos español</div>
+    <img class="qr" src="img/qr-site.png" alt="QR code linking to adventcapitalrealty.github.io">
+    <div class="cap" data-en>Scan to save my info</div>
+    <div class="cap" data-es>Escanee para guardar mi información</div>
+    <div class="socials">
+      <a href="https://www.facebook.com/adventcaprealty">Facebook</a>
+      <a href="https://www.instagram.com/realtor_gabe/">Instagram</a>
+      <a href="https://www.linkedin.com/in/gabemartinezbroker/">LinkedIn</a>
+      <a href="https://twitter.com/Broker_Gabe">X</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="lic">Advent Capital Realty &middot; CA DRE #01501814</div>
+  <div data-en>&copy; 2026 Advent Capital Realty. All rights reserved.</div>
+  <div class="credit">Photos: LA skyline by Michael Chusid (CC0, Wikimedia), suburbia aerial by Marek Slusarczyk (CC BY 3.0, Wikimedia), church by Leticia Roncero (CC BY 2.0, Flickr), fixer-upper by Nicholas_T (CC BY 2.0, Flickr), school (CC0, Wikimedia), desert (public domain, Flickr).</div>
+  <div data-es>&copy; 2026 Advent Capital Realty. Todos los derechos reservados.</div>
+</footer>
+
+<script>
+function toggleLang(){
+  var html=document.documentElement;
+  var es=html.lang==='es';
+  html.lang=es?'en':'es';
+  document.getElementById('langBtn').textContent=es?'Español':'English';
+}
+</script>
+</body>
+</html>
