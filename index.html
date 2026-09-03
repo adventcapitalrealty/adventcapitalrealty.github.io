@@ -44,6 +44,7 @@
   @keyframes heroRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   @media(prefers-reduced-motion:reduce){.hero::before,.hero::after{animation:none}.hero::after{opacity:0}.hero .wrap>*{animation:none}}
   .brand-hero{padding:36px 0;border-bottom:1px solid var(--line)}
+  .slogan{text-align:center;font-style:italic;font-size:clamp(1.15rem,2.8vw,1.55rem);color:var(--gold);letter-spacing:.05em;margin:26px auto 0}
   .brand-hero img{width:100%;max-height:440px;object-fit:cover;border-radius:4px;border:1px solid var(--line);display:block}
   .banner{width:100%;max-height:340px;object-fit:cover;border-radius:4px;margin:0 auto 36px;display:block;border:1px solid var(--line)}
   .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
@@ -123,6 +124,8 @@
 <section class="brand-hero">
   <div class="wrap">
     <img src="img/banner-brand.png" alt="Advent Capital Realty - city skyline with the company logo">
+    <p class="slogan" data-en>Listed. Sold. Solved.</p>
+    <p class="slogan" data-es>Listada. Vendida. Resuelta.</p>
   </div>
 </section>
 
