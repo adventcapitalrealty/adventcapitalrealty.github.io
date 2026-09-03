@@ -44,7 +44,7 @@
   @keyframes heroRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   @media(prefers-reduced-motion:reduce){.hero::before,.hero::after{animation:none}.hero::after{opacity:0}.hero .wrap>*{animation:none}}
   .brand-hero{padding:36px 0;border-bottom:1px solid var(--line)}
-  .slogan{text-align:center;font-style:italic;font-size:clamp(1.15rem,2.8vw,1.55rem);color:var(--gold);letter-spacing:.05em;max-width:420px;margin:26px auto 0;padding:18px 36px;border:3px solid var(--gold);border-radius:2px;text-wrap:balance}
+  .slogan{text-align:center;font-style:italic;font-size:clamp(1.15rem,2.8vw,1.55rem);color:var(--gold);letter-spacing:.05em;max-width:420px;margin:26px auto 0;text-wrap:balance}
   .brand-hero img{width:100%;max-height:440px;object-fit:cover;border-radius:4px;border:1px solid var(--line);display:block}
   .banner{width:100%;max-height:340px;object-fit:cover;border-radius:4px;margin:0 auto 36px;display:block;border:1px solid var(--line)}
   .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
@@ -83,6 +83,9 @@
   footer .lic{color:#f7ece4}
   #distressed h2{margin-bottom:26px}
   #distressed .lede{max-width:680px;margin:0 auto 30px;text-align:center;font-size:1.05rem}
+  .gold-box{border:3px solid var(--gold);border-radius:2px;padding:44px 40px;max-width:840px;margin:0 auto 36px;text-align:center}
+  .gold-box h2{margin-bottom:18px}
+  .gold-box .lede{margin-bottom:0}
   #distressed .signoff{text-align:center;font-size:.95rem;font-weight:bold;color:#331812;letter-spacing:.04em;line-height:2}
   #distressed .signoff a{color:#7c3a1e;text-decoration:none}
   [data-es]{display:none}
@@ -131,10 +134,12 @@
 
 <section id="distressed">
   <div class="wrap">
+    <div class="gold-box">
     <h2 data-en>Can't List It? I Can Still Sell It.</h2>
     <h2 data-es>&iquest;No Puede Listarla? Yo S&iacute; Puedo Venderla.</h2>
     <p class="lede" data-en>Some properties are too far gone for the open market. My private cash buyer network buys them anyway - any condition, as-is. No repairs, no cleanup, no problem. No loan approvals, no deals falling apart in escrow. If your property won't survive a traditional sale, my network lets me move it fast, quietly, and for cash.</p>
     <p class="lede" data-es>Algunas propiedades están demasiado deterioradas para el mercado abierto. Mi red privada de compradores en efectivo las compra de todos modos - en cualquier condición, tal como están. Sin reparaciones, sin limpieza, sin problema. Sin aprobaciones de préstamos, sin tratos que se caen en escrow. Si su propiedad no sobreviviría una venta tradicional, mi red me permite moverla rápido, discretamente y en efectivo.</p>
+    </div>
     <div class="signoff" data-en>Gabe Martinez, Real Estate Broker | DRE 01501814<br><a href="tel:+19518470694">951-847-0694</a> | <a href="https://gabemartinezre.com">gabemartinezre.com</a> | Hablo Espa&ntilde;ol</div>
     <div class="signoff" data-es>Gabe Martinez, Corredor de Bienes Ra&iacute;ces | DRE 01501814<br><a href="tel:+19518470694">951-847-0694</a> | <a href="https://gabemartinezre.com">gabemartinezre.com</a> | Hablo Espa&ntilde;ol</div>
   </div>
