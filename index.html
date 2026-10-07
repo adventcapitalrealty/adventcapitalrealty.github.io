@@ -53,7 +53,8 @@
   .cap{text-align:center;font-size:.9rem;font-weight:bold;margin-top:10px;color:#331812;letter-spacing:.06em}
   .professional-portrait{width:min(360px,100%);height:auto;border-radius:6px;border:3px solid var(--gold);display:block;margin:0 auto 30px}
   .headshot{width:180px;height:180px;object-fit:cover;border-radius:50%;border:3px solid var(--gold);display:block;margin:0 auto 30px}
-  .contact .headshot{object-fit:contain;padding:12px;background:var(--paper)}
+  .contact-portrait{width:180px;height:180px;border:3px solid var(--gold);border-radius:50%;overflow:hidden;margin:0 auto 30px;position:relative}
+  .contact-portrait img{position:absolute;width:390px;max-width:none;height:auto;left:50%;top:-155px;transform:translateX(-40%)}
   .qr{width:150px;height:150px;display:block;margin:26px auto 8px;border:1px solid var(--line);border-radius:6px;background:#fff;padding:6px}
   .credit{margin-top:10px;font-size:.7rem;color:#9c7f72}
   .hero .kicker{display:flex;align-items:center;justify-content:center;gap:16px;font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:#d98c5f;font-weight:bold;text-shadow:0 1px 5px rgba(0,0,0,.65);margin-bottom:26px}
@@ -69,6 +70,10 @@
   h2{font-size:1.7rem;font-weight:normal;text-align:center;margin-bottom:8px}
   .sub{text-align:center;color:#331812;font-weight:bold;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:40px}
   #specialty .lede{max-width:680px;margin:-20px auto 36px;text-align:center;font-size:1.02rem}
+  #services .grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+  #services .card:last-of-type{grid-column:span 2}
+  @media(max-width:850px){#services .grid{grid-template-columns:repeat(2,minmax(0,1fr))}#services .card:last-of-type{grid-column:1/-1}}
+  @media(max-width:600px){#services .grid{grid-template-columns:1fr}#services .card:last-of-type{grid-column:auto}}
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
   .card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);padding:28px 24px}
   .card h3{font-size:1.1rem;margin-bottom:10px}
@@ -248,7 +253,7 @@
   <div class="wrap">
     <h2 data-en>Contact</h2><h2 data-es>Contacto</h2>
     <div class="sub" data-en>Let's talk</div><div class="sub" data-es>Hablemos</div>
-    <img class="headshot" src="1-gabe-mixed-use-portrait.jpg" alt="Gabe Martinez, Broker" width="180" height="180" loading="lazy">
+    <div class="contact-portrait"><img src="1-gabe-mixed-use-portrait.jpg" alt="Gabe Martinez, Broker" width="1200" height="1600" loading="lazy"></div>
     <div class="line"><strong>Gabe Martinez</strong></div>
     <div class="line">Advent Capital Realty &middot; Upland, CA</div>
     <div class="line" data-en>Real Estate Broker</div>
