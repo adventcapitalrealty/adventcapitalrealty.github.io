@@ -22,6 +22,9 @@
   .brand span{color:#d98c5f}
   .lang-toggle{font-family:inherit;font-size:.68rem;letter-spacing:.08em;background:transparent;color:#d8b8a8;border:1px solid #9c7f72;padding:4px 10px;cursor:pointer;border-radius:2px;opacity:.9}
   .lang-toggle:hover{background:var(--gold);color:#f7ece4;border-color:var(--gold);opacity:1}
+  .header-right{display:flex;align-items:center;gap:10px}
+  .nav-link{font-family:inherit;font-size:.68rem;letter-spacing:.08em;background:transparent;color:#f7ece4;border:1px solid var(--gold);padding:4px 10px;cursor:pointer;border-radius:2px;text-decoration:none;text-transform:uppercase}
+  .nav-link:hover{background:var(--gold)}
   .hero{position:relative;overflow:hidden;padding:150px 0 120px;text-align:center;border-bottom:2px solid var(--gold);color:#f7ece4}
   .hero::before{content:'';position:absolute;inset:-6%;z-index:0;
     background:linear-gradient(to bottom,rgba(51,24,18,.6),rgba(40,18,12,.72) 55%,rgba(28,18,16,.92)),url('img/suburbia-aerial.jpg') center/cover no-repeat;
@@ -106,13 +109,24 @@
     .hero .kicker::before,.hero .kicker::after{width:26px}
     .hero p{font-size:1rem;margin-bottom:28px}
   }
+  @media(max-width:600px){
+    .header-right{gap:6px}
+    .nav-link{font-size:.6rem;letter-spacing:.05em;padding:4px 7px}
+    .lang-toggle{padding:4px 7px}
+  }
+  @media(max-width:480px){
+    .brand{font-size:.78rem;letter-spacing:.06em;gap:6px}
+  }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <div class="brand"><img src="img/logo.png" alt="">Advent Capital <span>Realty</span></div>
-    <button class="lang-toggle" id="langBtn" onclick="toggleLang()">ES</button>
+    <div class="header-right">
+      <a class="nav-link" href="posterboard.html">Posterboard</a>
+      <button class="lang-toggle" id="langBtn" onclick="toggleLang()">ES</button>
+    </div>
   </div>
 </header>
 
